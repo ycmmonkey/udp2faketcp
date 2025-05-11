@@ -1,13 +1,14 @@
 package udp2faketcp
 
 import (
-	"github.com/xtaci/tcpraw"
 	"io"
 	"log"
 	"net"
 	"runtime"
 	"sync"
 	"time"
+
+	"github.com/xtaci/tcpraw"
 )
 
 var tcpConnections sync.Map

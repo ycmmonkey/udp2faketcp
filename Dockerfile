@@ -1,4 +1,4 @@
-FROM alpine:latest AS builder
+FROM golang:1.24-alpine AS builder
 
 RUN set -eux && apk add --no-cache iptables go
 
