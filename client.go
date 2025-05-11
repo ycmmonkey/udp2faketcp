@@ -54,7 +54,7 @@ func Client(localAddr string, remoteAddr string) {
 							tcpLock.Unlock()
 							continue
 						}
-						tcpConn.SetDeadline(time.Now().Add(UDP_TTL))
+						err = tcpConn.SetDeadline(time.Now().Add(UDP_TTL))
 						if err != nil {
 							debugLogln("Error set deadline:", err)
 							tcpLock.Unlock()

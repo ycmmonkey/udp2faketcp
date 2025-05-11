@@ -58,7 +58,7 @@ func ulisten(addr string) {
 			return
 		}
 		fmt.Println("Received:", string(buf[:n]))
-		conn.WriteToUDP([]byte(message), udpAddr)
+		_, err = conn.WriteToUDP([]byte(message), udpAddr)
 		if err != nil {
 			fmt.Println("Error reply:", err.Error())
 			return
