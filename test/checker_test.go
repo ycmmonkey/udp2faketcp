@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/huangzheng2016/udp2faketcp"
 	"net"
 	"testing"
 	"time"
+
+	"github.com/ycmmonkey/udp2faketcp"
 )
 
 func listen(addr string) {

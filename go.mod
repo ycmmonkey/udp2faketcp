@@ -1,4 +1,4 @@
-module github.com/huangzheng2016/udp2faketcp
+module github.com/ycmmonkey/udp2faketcp
 
 go 1.22
 
