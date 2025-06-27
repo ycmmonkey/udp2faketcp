@@ -7,11 +7,14 @@ import (
 
 // 全局配置
 const (
-	MAX_PACKET_LEN   = 1440 // MTU大小
-	UDP_TTL          = 180 * time.Second
 	BUFFER_POOL_SIZE = 1000  // buffer池大小
 	MAX_CONNECTIONS  = 10000 // 最大连接数
-	DEBUG            = false
+)
+
+var (
+	UDP_TTL        = 180 * time.Second
+	MAX_PACKET_LEN = 1440 // MTU大小
+	DEBUG          = false
 )
 
 // 全局buffer池 - 支持不同大小的buffer
