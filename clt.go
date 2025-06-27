@@ -3,7 +3,6 @@ package udp2faketcp
 import (
 	"flag"
 	"log"
-	"time"
 )
 
 type Options struct {
@@ -48,9 +47,9 @@ func CtlInit() {
 	flag.IntVar(&o.MTU, "mtu", 1440, "MTU: default 1440")
 	flag.IntVar(&o.MTU, "m", 1440, "MTU: default 1440")
 	flag.Parse()
-	UDP_TTL = time.Duration(o.TTL) * time.Second
-	MAX_PACKET_LEN = o.MTU
-	DEBUG = o.Debug
+	// UDP_TTL = time.Duration(o.TTL) * time.Second
+	// MAX_PACKET_LEN = o.MTU
+	// DEBUG = o.Debug
 	if o.Help || (o.Server == false && o.Client == false) || o.ListenAddr == "" || o.RemoteAddr == "" {
 		flag.Usage()
 	} else if o.Server {
